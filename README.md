@@ -16,8 +16,8 @@ It retrieves, classifies, and aggregates customer reviews, providing insights an
 ## Author
 
 **Praveen Mishra**  
-LinkedIn: [Your LinkedIn URL]  
-GitHub: [Your GitHub URL]  
+LinkedIn: https://www.linkedin.com/in/praveenmishra99/
+GitHub: https://github.com/crazzycoder77
 
 ## Installation
 
@@ -76,7 +76,7 @@ ASIN Counts:
   - B0150QQ35Y: 10
 
 Example Reviews:
-ASIN: B0CK1WB7KC
+ASIN: Iphone 16
 Sentiment: negative
 Reason: Shipping took longer than expected
 Review Text: The shipping was extremely slow, arrived 10 days late...

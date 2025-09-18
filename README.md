@@ -21,13 +21,12 @@ The system includes a **supervisor agent** that iteratively improves queries for
 ## Installation
 
 1. Clone the repository:
-```bash
+```
 git clone https://github.com/crazzycoder77/Dynamic-Multi-Agent-Customer-Anecdote-Analyzer.git
 cd Dynamic-Multi-Agent-Customer-Anecdote-Analyzer
 ```
 2. Install required dependencies:
 ```
-bash
 pip install -r requirements.txt
 ```
 Ensure you have your Groq API key ready.
@@ -35,7 +34,6 @@ Ensure you have your Groq API key ready.
 ##  Usage
 Run the program via CLI:
 ```
-bash
 python main.py --api_key YOUR_GROQ_API_KEY [--csv path/to/reviews.csv] [--rebuild]
 ```
 ## Arguments
@@ -47,8 +45,6 @@ python main.py --api_key YOUR_GROQ_API_KEY [--csv path/to/reviews.csv] [--rebuil
 
 ##  Example:
 ```
-bash
-Copy code
 python main.py --api_key abc123 --csv data/reviews.csv --rebuild
 ```
 You will be prompted for queries:

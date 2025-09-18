@@ -53,8 +53,6 @@ python main.py --api_key abc123 --csv data/reviews.csv --rebuild
 ```
 You will be prompted for queries:
 ```
-text
-Copy code
 Query> high shipping fees
 ```
 Type your query to retrieve matching reviews, insights, and trends.
@@ -70,13 +68,13 @@ The input CSV should include:
 | Review  | Text	Customer review text  |
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the <a href="https://github.com/crazzycoder77/Dynamic-Multi-Agent-Customer-Anecdote-Analyzer/blob/main/LICENSE.txt">LICENSE</a> file for details.
 
 ## Acknowledgements
-FAISS – Efficient similarity search
+<a href="https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/">FAISS</a> – Efficient similarity search
 
-SentenceTransformers – Embeddings
+<a href="https://sbert.net/">SentenceTransformers</a> – Embeddings
 
-LangGraph – Multi-agent workflow
+<a href="https://www.langchain.com/langgraph">LangGraph</a> – Multi-agent workflow
 
-ChatGroq – LLM-powered query expansion and classification
+<a href="https://groq.com/">ChatGroq</a> – LLM-powered query expansion and classification

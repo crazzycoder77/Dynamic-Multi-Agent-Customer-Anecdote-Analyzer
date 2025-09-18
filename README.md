@@ -65,9 +65,9 @@ Type exit or quit to stop the program.
 ## CSV Format
 The input CSV should include:
 
-Column Name	Description
-ASIN	Product identifier
-Review Text	Customer review text
+Column | Name	Description
+ASIN	| Product identifier
+Review | Text	Customer review text
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.

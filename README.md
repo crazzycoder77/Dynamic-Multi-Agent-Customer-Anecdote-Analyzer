@@ -24,30 +24,34 @@ The system includes a **supervisor agent** that iteratively improves queries for
 ```bash
 git clone https://github.com/crazzycoder77/Dynamic-Multi-Agent-Customer-Anecdote-Analyzer.git
 cd Dynamic-Multi-Agent-Customer-Anecdote-Analyzer
-Install required dependencies:
-
+```
+2. Install required dependencies:
+```
 bash
 Copy code
 pip install -r requirements.txt
 Ensure you have your Groq API key ready.
-
-Usage
+```
+3. Usage
 Run the program via CLI:
-
+```
 bash
 Copy code
 python main.py --api_key YOUR_GROQ_API_KEY [--csv path/to/reviews.csv] [--rebuild]
-Arguments
+```
+4. Arguments
 --api_key (required): Your Groq API key for ChatGroq LLM access.
 
 --csv (optional): Path to CSV file containing reviews (required if building/rebuilding embeddings).
 
 --rebuild (optional): Force rebuild of embeddings and FAISS index from CSV.
 
-Example:
+5. Example:
+```
 bash
 Copy code
 python main.py --api_key abc123 --csv data/reviews.csv --rebuild
+```
 You will be prompted for queries:
 
 text

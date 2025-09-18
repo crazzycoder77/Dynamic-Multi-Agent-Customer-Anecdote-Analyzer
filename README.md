@@ -28,15 +28,14 @@ cd Dynamic-Multi-Agent-Customer-Anecdote-Analyzer
 2. Install required dependencies:
 ```
 bash
-Copy code
 pip install -r requirements.txt
-Ensure you have your Groq API key ready.
 ```
+Ensure you have your Groq API key ready.
+
 ##  Usage
 Run the program via CLI:
 ```
 bash
-Copy code
 python main.py --api_key YOUR_GROQ_API_KEY [--csv path/to/reviews.csv] [--rebuild]
 ```
 ## Arguments
@@ -65,9 +64,10 @@ Type exit or quit to stop the program.
 ## CSV Format
 The input CSV should include:
 
-Column | Name	Description
-ASIN	| Product identifier
-Review | Text	Customer review text
+| Column  | Name	Description |
+| ------------- | ------------- |
+| ASIN  | Product identifie  |
+| Review  | Text	Customer review text  |
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.

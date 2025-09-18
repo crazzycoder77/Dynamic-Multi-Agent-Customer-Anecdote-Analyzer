@@ -72,8 +72,8 @@ Copy code
 Total Matching Reviews: 15
 
 ASIN Counts:
-  - B0CK1WB7KC: 5
-  - B0150QQ35Y: 10
+  - Iphone16: 5
+  - Iphone17: 10
 
 Example Reviews:
 ASIN: Iphone 16

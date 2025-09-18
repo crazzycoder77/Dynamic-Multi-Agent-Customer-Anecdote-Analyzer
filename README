@@ -1,0 +1,96 @@
+# Dynamic Multi-Agent Customer Review Analyzer
+
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+## Overview
+
+This project is a **Dynamic Multi-Agent AI system** for analyzing product reviews from e-commerce platforms. It uses advanced embeddings, vector search, and LLM-powered nodes to:
+
+- Expand user queries for broader search coverage.
+- Dynamically retrieve relevant reviews.
+- Classify reviews for relevance and sentiment.
+- Aggregate insights and generate actionable summaries.
+- Include a supervisor node that iteratively improves query results.
+
+This repository is designed for **research and demo purposes** using anonymized or sample product review data.
+
+---
+
+## Features
+
+- **Query Expansion Node**: Reformulates and enriches user queries.
+- **Retrieval Node**: Uses FAISS vector search to find relevant reviews.
+- **Classification Node**: Categorizes reviews by relevance and sentiment.
+- **Aggregation Node**: Summarizes insights, identifies trends, and extracts example reviews.
+- **Supervisor Node**: Iteratively suggests improvements to queries and ensures quality results.
+- **LLM Integration**: Powered by ChatGroq or any compatible LLM.
+- **CLI Interface**: Interactive prompt for testing queries in real-time.
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/agentic-ai-review-analyzer.git
+cd agentic-ai-review-analyzer
+Install dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Prepare a sample dataset or your own product review CSV:
+
+text
+Copy code
+sample_reviews.csv
+Usage
+Run the analyzer via CLI:
+
+bash
+Copy code
+python main.py --api_key YOUR_GROQ_API_KEY --csv sample_reviews.csv
+--api_key: Your Groq API key for LLM access.
+
+--csv: Path to your review dataset (sample CSV included).
+
+--rebuild: Rebuild FAISS embeddings/index if needed.
+
+Interactive CLI:
+
+shell
+Copy code
+Query> delivery issues
+Query> product quality
+Query> exit
+File Structure
+bash
+Copy code
+├── main.py                  # Core Multi-Agent workflow
+├── requirements.txt         # Python dependencies
+├── sample_reviews.csv       # Sample anonymized review data
+├── README.md                # This file
+└── .gitignore               # Ignore local embeddings and cache
+Notes
+The system is fully generic, no proprietary or sensitive data is included.
+
+Sample CSV uses placeholder product IDs (P0001, P0002, etc.).
+
+FAISS indices (faiss_index.bin) and cached metadata (review_meta.pkl) are not committed.
+
+License
+MIT License. See LICENSE for details.
+
+Screenshots / Demo (Optional)
+Add screenshots or terminal demo gifs here if needed.
+
+yaml
+Copy code
+
+---
+
+If you want, I can also **update your `main.py` to reference `sample_reviews.csv` by default**, so anyone cloning the repo can run it immediately without changing anything.  
+
+Do you want me to do that?

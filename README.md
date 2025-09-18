@@ -32,46 +32,47 @@ Copy code
 pip install -r requirements.txt
 Ensure you have your Groq API key ready.
 ```
-3. Usage
+##  Usage
 Run the program via CLI:
 ```
 bash
 Copy code
 python main.py --api_key YOUR_GROQ_API_KEY [--csv path/to/reviews.csv] [--rebuild]
 ```
-4. Arguments
+## Arguments
 --api_key (required): Your Groq API key for ChatGroq LLM access.
 
 --csv (optional): Path to CSV file containing reviews (required if building/rebuilding embeddings).
 
 --rebuild (optional): Force rebuild of embeddings and FAISS index from CSV.
 
-5. Example:
+##  Example:
 ```
 bash
 Copy code
 python main.py --api_key abc123 --csv data/reviews.csv --rebuild
 ```
 You will be prompted for queries:
-
+```
 text
 Copy code
 Query> high shipping fees
+```
 Type your query to retrieve matching reviews, insights, and trends.
 
 Type exit or quit to stop the program.
 
-CSV Format
+## CSV Format
 The input CSV should include:
 
 Column Name	Description
 ASIN	Product identifier
 Review Text	Customer review text
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgements
+## Acknowledgements
 FAISS – Efficient similarity search
 
 SentenceTransformers – Embeddings

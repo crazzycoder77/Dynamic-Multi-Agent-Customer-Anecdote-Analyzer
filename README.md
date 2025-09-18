@@ -1,103 +1,77 @@
-# Dynamic Multi-Agent RAG with ChatGroq + Supervisor
+# Dynamic Multi-Agent Customer Review Analyzer
 
-![Python](https://img.shields.io/badge/python-3.10+-blue)
+🚀 **Dynamic Multi-Agent AI system** to analyze large volumes of customer reviews.  
+It uses **FAISS embeddings**, **LangGraph**, and **ChatGroq** to intelligently retrieve, classify, and aggregate reviews to provide actionable insights.  
 
-## Project Overview
+The system includes a **supervisor agent** that iteratively improves queries for better relevance.
 
-This project is a **Dynamic Multi-Agent Retrieval-Augmented Generation (RAG)** system using **ChatGroq** and **LangGraph**.  
-It retrieves, classifies, and aggregates customer reviews, providing insights and supervisor-guided query improvements.
+---
 
-**Key Features:**
-- Multi-agent architecture for query expansion, retrieval, classification, aggregation, and supervision.
-- Intelligent supervisor node to suggest improved queries.
-- FAISS-based embedding index for fast semantic search.
-- CLI output with full review text, sentiment analysis, and insights.
+## Features
 
-## Author
+- 🔍 **Query Expansion** using LLM (ChatGroq)
+- 🔎 **Dynamic Retrieval** from a FAISS index of reviews
+- 📝 **Classification** of reviews by match, sentiment, and reason
+- 🧩 **Aggregation** of insights and trends across products
+- 🛠️ **Supervisor Agent** for improved query suggestions
+- 🖥️ **CLI Interface** for interactive querying
 
-**Praveen Mishra**  
-LinkedIn: https://www.linkedin.com/in/praveenmishra99/
-GitHub: https://github.com/crazzycoder77
+---
 
 ## Installation
 
 1. Clone the repository:
-
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
-Make sure Python 3.10+ is installed.
-
-Install dependencies (the script also auto-installs missing packages):
+git clone https://github.com/crazzycoder77/Dynamic-Multi-Agent-Customer-Anecdote-Analyzer.git
+cd Dynamic-Multi-Agent-Customer-Anecdote-Analyzer
+Install required dependencies:
 
 bash
 Copy code
 pip install -r requirements.txt
+Ensure you have your Groq API key ready.
+
 Usage
-Set your Groq API key:
+Run the program via CLI:
 
 bash
 Copy code
-export GROQ_API_KEY="YOUR_GROQ_API_KEY"
-Run the script:
+python main.py --api_key YOUR_GROQ_API_KEY [--csv path/to/reviews.csv] [--rebuild]
+Arguments
+--api_key (required): Your Groq API key for ChatGroq LLM access.
 
+--csv (optional): Path to CSV file containing reviews (required if building/rebuilding embeddings).
+
+--rebuild (optional): Force rebuild of embeddings and FAISS index from CSV.
+
+Example:
 bash
 Copy code
-python main.py --api_key YOUR_GROQ_API_KEY --csv path/to/reviews.csv
-Optional flag to rebuild embeddings/index:
-
-bash
-Copy code
-python main.py --api_key YOUR_GROQ_API_KEY --csv path/to/reviews.csv --rebuild
-Enter queries in the CLI:
+python main.py --api_key abc123 --csv data/reviews.csv --rebuild
+You will be prompted for queries:
 
 text
 Copy code
 Query> high shipping fees
-Type exit or quit to terminate.
+Type your query to retrieve matching reviews, insights, and trends.
 
-Project Structure
-python
-Copy code
-.
-├── main.py                # Main script
-├── README.md              # This file
-├── requirements.txt       # Python dependencies
-└── LICENSE                # License file
-Example
-Query: customer not happy about quality
+Type exit or quit to stop the program.
 
-yaml
-Copy code
-Total Matching Reviews: 15
+CSV Format
+The input CSV should include:
 
-ASIN Counts:
-  - Iphone16: 5
-  - Iphone17: 10
-
-Example Reviews:
-ASIN: Iphone 16
-Sentiment: negative
-Reason: Shipping took longer than expected
-Review Text: The shipping was extremely slow, arrived 10 days late...
-
-Insights Summary:
-  - Summary: Customers are frequently complaining about delayed shipping.
-  - Patterns: Slow delivery times affect multiple ASINs across product categories.
-
-Supervisor Review:
-Query: high shipping fees
-Issues identified:
-  - No major issues identified by supervisor.
-Action Suggested: OK
-Future Enhancements
-Support for multi-language reviews.
-
-Integration with larger language models for deeper insights.
-
-Web-based dashboard for visualizing insights.
-
-Batch processing for large datasets.
+Column Name	Description
+ASIN	Product identifier
+Review Text	Customer review text
 
 License
-This project is licensed under the MIT License – see the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgements
+FAISS – Efficient similarity search
+
+SentenceTransformers – Embeddings
+
+LangGraph – Multi-agent workflow
+
+ChatGroq – LLM-powered query expansion and classification
